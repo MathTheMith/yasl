@@ -3,43 +3,13 @@
 !
 !
 
-
-(= 0 <= ? "wrong parameter\n" print exit)
-
-{
-    (1 -)			// n - 1
-    =				// save
-    (0 > )			// cmp gt
-    ? print_n : !
-    =
-	(1 #print)
-}print_n
-
-(# 1 >) // if param
-@
-(
-
-	( = 3 !^ ) // save n
-	print_n // (n, str)
-	("\n" 1 #print)
+(# 1 - = 0 >)
+? #(
+	(= 3 !^)
+	(0 -)
+	#( = print )
 	!
-	(1 +) //n++
-	(# 1 >) // while param
-)
-
-
-
-//  while param
-//      print_n(n, param)
-//      n++
-//      param->next
-
-
-// void print_n(n, str)
-// n--
-// if n > 0
-//      print_n(n, str)
-// print(str)
-
-
-// print ( n , ...)
+	"\n"
+	print
+	(1 +)
+):("error\n" print)
