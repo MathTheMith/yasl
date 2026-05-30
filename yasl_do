@@ -3,85 +3,25 @@
 !
 !
 print_stack
-2
-!^
-print_stack
+
 {
-1
-#print
-"\n"
-1
-#print
+    1
+    #print
+    "\n"
+    1
+    #print
 }print_ln
 
-
-
-
 {
-    =
-    "+"
-    ==
-    ? (!
-        "add"
-        print_ln
-        +
-        print_ln
-        " "
-    )
-
-    =
-    "-"
-    ==
-    ? (! "sub" print_ln - print_ln " ")
-
-    =
-    "*"
-    ==
-    ? (! "mul" print_ln * print_ln " ")
-
-    =
-    "/"
-    ==
-    ? (! "div" print_ln / print_ln " ")
-
-    =
-    "mod"
-    ==
-    ? (! "mod" print_ln % print_ln " ")
-
-    =
-    "<"
-    ==
-    ? (! "lt" print_ln < print_ln " ")
-
-    =
-    "<="
-    ==
-    ? (! "le" print_ln <= print_ln " ")
-
-    =
-    ">"
-    ==
-    ? (! "gt" print_ln > print_ln " ")
-
-    =
-    ">="
-    ==
-    ? (! "ge" print_ln >= print_ln " ")
-
-    =
-    "="
-    ==
-    ? (! "eq" print_ln = print_ln " ")
-
-    =
-    "!="
-    ==
-    ? (! "ne" print_ln != print_ln " ")
-
-    !
+    eval
+    3
+    ^
+    eval
+    3
+    ^
+    eval
+    print_ln
 }run_cmd
-
 
 run_cmd
 print_stack
