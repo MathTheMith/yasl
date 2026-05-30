@@ -3,13 +3,18 @@
 !
 !
 
-(# 1 - = 0 >)
-? #(
-	(= 3 !^)
-	(0 -)
-	#( = print )
-	!
-	"\n"
-	print
-	(1 +)
-):("error\n" print)
+( 0 - = 0 >)
+?(
+	(# 1 - = 0 >)
+	? #(
+		(0 -)
+		(= 3 !^)
+		#( = print )
+		!
+		"\n"
+		print
+		(1 +)
+	)
+	:("Error: missing param\n" print)
+)
+:("Error: bad param\n" print)
