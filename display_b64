@@ -23,7 +23,6 @@
 	print
 }print_color
 
-"---\n" print
 //	(c) -> u6
 {
 	0		//	ret
@@ -100,27 +99,39 @@
 
 load_img
 [#] 4 /
-"Image received, nb pixels : " print 
+"Image received, nb pixels : " print
 = "" + print "\n" print
 sqrt
-"Found square : " print 
+"Found square : " print
 = "" + print "\n" print
-!
+4 *
+(2 ^)
 [#]
 0
 (2 ^)
 #(
-		%]#[
-		get_base64
-		(# !^)
-		( = 4 % 3 ==)?
+	%]#[
+	get_base64
+	(# !^)
+	( = 4 % 3 ==)?
 	(
 		(# 4 #^)
 		process_base64
 		print_color
+		"\e[0m"
+		print
 	):(
 	)
 
+	=
+	(4 ^)
+	=
+	(5 !^)
+
+	(% 0 ==)
+
+	? ("\n" print)
 
 	1 +
 )
+("\n" print)
