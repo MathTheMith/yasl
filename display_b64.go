@@ -88,16 +88,24 @@
 }load_img
 
 {
-	[#]
 	1
-	(= = * <)
+	(= = * (3 ^) %<)
 	@(
+		(2 !^) ! (2 ^)
 		1 +
-		(= = * <)
+		(= = * (3 ^) %<)
 	)
+	! !
 }sqrt
 
 load_img
+[#] 4 /
+"Image received, nb pixels : " print 
+= "" + print "\n" print
+sqrt
+"Found square : " print 
+= "" + print "\n" print
+!
 [#]
 0
 (2 ^)
